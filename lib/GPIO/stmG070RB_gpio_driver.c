@@ -258,7 +258,8 @@ uint8_t GPIO_ReadFromInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
 *
 * @return           - uint16_t: Returns the 16-bit value representing the state of all the pins in the specified GPIO port.
 *
-* @note             - This function reads the input data register (IDR) of the specified GPIO port and returns the value of all the pins in the port.
+* @note             - This function reads the input data register (IDR) of the specified GPIO port 
+*                     and returns the value of all the pins in the port.
 *******************************************************/
 
 uint16_t GPIO_ReadFromInputPort(GPIO_RegDef_t *pGPIOx)
@@ -279,7 +280,8 @@ uint16_t GPIO_ReadFromInputPort(GPIO_RegDef_t *pGPIOx)
 *
 * @return           - None
 *
-* @note             - This function directly modifies the output data register (ODR) to set or clear the state of a specific GPIO pin.
+* @note             - This function directly modifies the output data register (ODR) 
+*                     to set or clear the state of a specific GPIO pin.
 *******************************************************/
 
 void GPIO_WriteToOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value)
@@ -306,7 +308,8 @@ void GPIO_WriteToOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Val
 *
 * @return           - None
 *
-* @note             - This function directly writes the provided 16-bit value to the output data register (ODR), affecting all pins in the specified GPIO port.
+* @note             - This function directly writes the provided 16-bit value to the output data register (ODR), 
+*                     affecting all pins in the specified GPIO port.
 *******************************************************/
 
 void GPIO_WriteToOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value)
@@ -324,7 +327,8 @@ void GPIO_WriteToOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value)
 *
 * @return           - None
 *
-* @note             - This function toggles the state of the specified GPIO pin by using a bitwise XOR operation on the output data register (ODR).
+* @note             - This function toggles the state of the specified GPIO pin by using a bitwise XOR operation 
+*                     on the output data register (ODR).
 *******************************************************/
 
 void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
