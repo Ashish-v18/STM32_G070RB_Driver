@@ -106,7 +106,7 @@ typedef struct
     __vo uint32_t PUPDR;   /*| GPIO port pull-up/pull-down registor          Address offset:0x0C |*/
     __vo uint32_t IDR;     /*| GPIO port input data register                 Address offset:0x10 |*/
     __vo uint32_t ODR;     /*| GPIO port output data register                Address offset:0x14 |*/
-    __vo uint32_t BSSR;    /*| GPIO bit set/reset register                   Address offset:0x18 |*/
+    __vo uint32_t BSRR;    /*| GPIO bit set/reset register                   Address offset:0x18 |*/
     __vo uint32_t LCKR;    /*| GPIO port configuration lock register         Address offset:0x1C |*/
     __vo uint32_t AFR[2];  /*| AFR[0] GPIO alternate function low register,    AFR[1] GPIO alternate function high register       Address offset:0x20-0x24 |*/
     __vo uint32_t BRR;     /*| GPIO port bit reset register                  Address offset:0x28 |*/
