@@ -3,7 +3,7 @@
 	"schema": {
 		"schemaVersion": 2,
 		"sequences": {
-			"com.tldraw.store": 4,
+			"com.tldraw.store": 5,
 			"com.tldraw.asset": 1,
 			"com.tldraw.camera": 1,
 			"com.tldraw.document": 2,
@@ -23,16 +23,364 @@
 			"com.tldraw.shape.geo": 10,
 			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
-			"com.tldraw.shape.frame": 0,
-			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 7,
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
-			"com.tldraw.shape.image": 4,
-			"com.tldraw.shape.video": 2,
-			"com.tldraw.binding.arrow": 0
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
 		}
 	},
 	"records": [
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 536.7321833394633,
+			"y": 528.0302838568634,
+			"lastActivityTimestamp": 1761060422390,
+			"meta": {}
+		},
+		{
+			"x": 294.10583113718826,
+			"y": 62.251139833296634,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:guSEzxlQ5opRpoxBIhqwH",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "m",
+				"w": 778.8671875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "UART_1 TX/RX : PC4/PC5"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "UART_2 TX/RX : PA2/PA3 (ST-Link Virtual Port Com)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "I2C1 SCL/SDA : PB8/PB9 (Arduino I2C)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "I2C2 SCL/SDA : PA11/PA12"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "SPI1 NSS/SCK/MISO/MOSI : PB0/PA5/PA6/PA7 (Arduino SPI)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "SPI2 NSS/SCK/MISO/MOSI : PB12/PB13/PB14/PB15"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "USER_PB : PC13"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "LD4 : PA5"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "PWM : PA6"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "ADC1 IN0 : PA0"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "ADC1 IN1 : PA1"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "DAC1_OUT1 : PA4"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a30XY6KV",
+			"typeName": "shape"
+		},
+		{
+			"x": -130.43728450424874,
+			"y": 51.865472048075866,
+			"z": 1.0682280930532393,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:nrcCVeytm426JYAzOCO8i"
+			],
+			"hoveredShapeId": "shape:nrcCVeytm426JYAzOCO8i",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 10.1001824626033,
+			"y": 55.93205218747232,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:79T8-MKM95B3d4hKVcsw_",
+			"type": "geo",
+			"props": {
+				"w": 288.3498753712785,
+				"h": 475.1296827902319,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a2P7xqgV",
+			"typeName": "shape"
+		},
+		{
+			"x": 311.0548974159549,
+			"y": 51.35013631966329,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:nrcCVeytm426JYAzOCO8i",
+			"type": "geo",
+			"props": {
+				"w": 797.3928775855993,
+				"h": 479.5031635387553,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "green",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a4m1YSOV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
 		{
 			"gridSize": 10,
 			"name": "",
@@ -41,11 +389,52 @@
 			"typeName": "document"
 		},
 		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:geo": "rectangle",
+				"tldraw:color": "green"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 842,
+				"h": 898
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 2,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
 			"meta": {},
-			"id": "page:page",
-			"name": "Page 1",
-			"index": "a1",
-			"typeName": "page"
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
 		},
 		{
 			"x": 75.71338782857194,
@@ -244,278 +633,6 @@
 			"parentId": "page:page",
 			"index": "a1",
 			"typeName": "shape"
-		},
-		{
-			"x": 660.4437713623047,
-			"y": 56.000022888183594,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:yRqHe1LVPgHYREg05xeYj",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "m",
-				"w": 359.9125061035156,
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 0.6896701013074725,
-				"richText": {
-					"type": "doc",
-					"content": [
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "1  - PC9      2  - PC8\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "3  - PB8      4  - PC6\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "5  - PB9      6  - PA3\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "7  - AVDD     8  - 5V-USB-CHG\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "9  - AVDD     10 - PD6\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "11 - GND      12 - PA12\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "13 - GND      14 - PA11\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "15 - PA5      16 - PC0\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "17 - PA6      18 - PC7\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "19 - PA7      20 - PA9\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "21 - PA4      22 - PB2\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "23 - PC7      24 - PB6\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "25 - PA9      26 - PB14\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "27 - PB4      28 - PB15\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "29 - PB5      30 - PB10\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "31 - PB3      32 - PB13\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "33 - PA10     34 - AGND\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "35 - PA2      36 - PA8\r"
-								}
-							]
-						},
-						{
-							"type": "paragraph",
-							"content": [
-								{
-									"type": "text",
-									"text": "37 - PA0      38 - PB9\r"
-								}
-							]
-						}
-					]
-				}
-			},
-			"parentId": "page:page",
-			"index": "a27fc",
-			"typeName": "shape"
-		},
-		{
-			"id": "pointer:pointer",
-			"typeName": "pointer",
-			"x": 418.32032775878906,
-			"y": 345.4593849182129,
-			"lastActivityTimestamp": 1742391177224,
-			"meta": {}
-		},
-		{
-			"followingUserId": null,
-			"opacityForNextShape": 1,
-			"stylesForNextShape": {},
-			"brush": null,
-			"scribbles": [],
-			"cursor": {
-				"type": "default",
-				"rotation": 0
-			},
-			"isFocusMode": false,
-			"exportBackground": true,
-			"isDebugMode": false,
-			"isToolLocked": false,
-			"screenBounds": {
-				"x": 0,
-				"y": 0,
-				"w": 1627,
-				"h": 918
-			},
-			"insets": [
-				false,
-				false,
-				true,
-				false
-			],
-			"zoomBrush": null,
-			"isGridMode": false,
-			"isPenMode": false,
-			"chatMessage": "",
-			"isChatting": false,
-			"highlightedUserIds": [],
-			"isFocused": true,
-			"devicePixelRatio": 1,
-			"isCoarsePointer": false,
-			"isHoveringCanvas": true,
-			"openMenus": [],
-			"isChangingStyle": false,
-			"isReadonly": false,
-			"meta": {},
-			"duplicateProps": null,
-			"id": "instance:instance",
-			"currentPageId": "page:page",
-			"typeName": "instance"
-		},
-		{
-			"editingShapeId": null,
-			"croppingShapeId": null,
-			"selectedShapeIds": [],
-			"hoveredShapeId": null,
-			"erasingShapeIds": [],
-			"hintingShapeIds": [],
-			"focusedGroupId": null,
-			"meta": {},
-			"id": "instance_page_state:page:page",
-			"pageId": "page:page",
-			"typeName": "instance_page_state"
-		},
-		{
-			"x": -19.320327758789062,
-			"y": -2.4593849182128906,
-			"z": 1,
-			"meta": {},
-			"id": "camera:page:page",
-			"typeName": "camera"
 		}
 	]
 }
