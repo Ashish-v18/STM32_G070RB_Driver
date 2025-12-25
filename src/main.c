@@ -28,7 +28,7 @@
  */
 void delay(void)
 {
-    for (volatile uint32_t i = 0; i <= 1000000; i++);
+    for (volatile uint32_t i = 0; i <= 10000000; i++);
 }
 
 /**
