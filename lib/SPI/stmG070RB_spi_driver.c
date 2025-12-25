@@ -108,15 +108,30 @@ void SPI_Init(SPI_Handle_t *pSPIHandle)
     // 4. Configure CPOL and CPHA
     tempreg |= (pSPIHandle->SPIConfig.SPI_CPOL << SPI_CR1_CPOL);
     tempreg |= (pSPIHandle->SPIConfig.SPI_CPHA << SPI_CR1_CPHA);
+    
+    // 5. Configure SSM (Software Slave Management)
+    tempreg |= (pSPIHandle->SPIConfig.SPI_SSM << SPI_CR1_SSM);
 
     // Write the updated value to SPI_CR1 register
     pSPIHandle->pSPIx->CR1 = tempreg;
 
-    // 5. Configure Data Size (DS[3:0]) in SPI_CR2
+    // 6. Configure Data Size (DS[3:0]) in SPI_CR2
     pSPIHandle->pSPIx->CR2 &= ~(0xF << SPI_CR2_DS); // Clear DS bits
     pSPIHandle->pSPIx->CR2 |= (pSPIHandle->SPIConfig.SPI_DS << SPI_CR2_DS);
+    
+    // 7. Set FRXTH (FIFO RX Threshold) for 8-bit mode
+    // FRXTH=1 for 8-bit, FRXTH=0 for 16-bit
+    if ((pSPIHandle->SPIConfig.SPI_DS == SPI_DS_8BIT) || 
+        (pSPIHandle->SPIConfig.SPI_DS < SPI_DS_9BIT))
+    {
+        pSPIHandle->pSPIx->CR2 |= (1 << SPI_CR2_FRXTH);
+    }
+    else
+    {
+        pSPIHandle->pSPIx->CR2 &= ~(1 << SPI_CR2_FRXTH);
+    }
 
-    // 6. Enable SPI if needed (optional)
+    // 8. Enable SPI if needed (optional)
     // pSPIHandle->pSPIx->CR1 |= (1 << SPI_CR1_SPE);
 }
 
@@ -174,14 +189,14 @@ void SPI_SendData(SPI_Handle_t *pSPIx, uint8_t *pTxBuffer, uint32_t Len)
         if ((pSPIx->pSPIx->CR2 & (0xF << SPI_CR2_DS)) == (SPI_DS_16BIT << SPI_CR2_DS))
         {
             // 16-bit mode: Load two bytes at a time
-            pSPIx->pSPIx->DR = *((uint16_t *)pTxBuffer);
+            *((__vo uint16_t *)&pSPIx->pSPIx->DR) = *((uint16_t *)pTxBuffer);
             Len -= 2;
             pTxBuffer += 2;
         }
         else
         {
             // 8-bit mode: Load one byte at a time
-            pSPIx->pSPIx->DR = *pTxBuffer;
+            *((__vo uint8_t *)&pSPIx->pSPIx->DR) = *pTxBuffer;
             Len--;
             pTxBuffer++;
         }
@@ -239,5 +254,43 @@ void SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
     else
     {
         pSPIx->CR1 &= ~(1 << SPI_CR1_SSI);
+    }
+}
+/*******************************************************
+ * @fn               - SPI_ReceiveData
+ *
+ * @brief            - Receives data over SPI using blocking mode.
+ *
+ * @param[in]        - pSPIx: Pointer to the SPI peripheral base address.
+ * @param[in]        - pRxBuffer: Pointer to the buffer to store received data.
+ * @param[in]        - Len: Length of data to receive in bytes.
+ *
+ * @return           - None
+ *
+ * @note             - This function waits until the RXNE (Receive Buffer Not Empty) flag is set before reading data.
+ *******************************************************/
+void SPI_ReceiveData(SPI_RegDef_t *pSPIx, uint8_t *pRxBuffer, uint32_t Len)
+{
+    while (Len > 0)
+    {
+        // 1. Wait until RXNE is set
+        while (SPI_GetFlagStatus(pSPIx, SPI_RXNE_FLAG) == FLAG_RESET)
+            ;
+
+        // 2. Check Data Frame Size (DS[3:0])
+        if ((pSPIx->CR2 & (0xF << SPI_CR2_DS)) == (SPI_DS_16BIT << SPI_CR2_DS))
+        {
+            // 16-bit mode
+            *((uint16_t *)pRxBuffer) = pSPIx->DR;
+            Len -= 2;
+            pRxBuffer += 2;
+        }
+        else
+        {
+            // 8-bit mode
+            *pRxBuffer = pSPIx->DR;
+            Len--;
+            pRxBuffer++;
+        }
     }
 }
